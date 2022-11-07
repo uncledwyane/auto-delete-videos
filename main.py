@@ -18,7 +18,7 @@ config = {
 class Browser:
     def __init__(self):
         self.driver = uc.Chrome(use_subprocess=True, executable_path='C:/Program Files/Google/Chrome/Application/chromedriver.exe')
-        self.self.wait = WebDriverWait.Wait(self.driver, 20)
+        self.wait = WebDriverWait.Wait(self.driver, 20)
         self.chrome_options = uc.ChromeOptions()
         self._init_options()
 
@@ -72,7 +72,6 @@ class Browser:
             sleep(5)
             self.login_rumble()
 
-
     def login_rumble(self):
         sleep(1)
         print('打开rumble')
@@ -122,7 +121,6 @@ class Browser:
             # 持久化
             sleep(3)
             self.delete_videos()
-
 
     def delete_videos(self):
         print('5秒后开始检测并删除视频')
