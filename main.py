@@ -117,6 +117,9 @@ class Browser:
 
             rec_email_next_step = self.wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="view_container"]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button')))
             rec_email_next_step.click()
+            logging.info('google登录完成，即将打开rumble')
+            self.ui.log('google登录完成，即将打开rumble')
+            self.login_rumble()
         except exceptions.NoSuchElementException:
             logging.info('google登录完成，即将打开rumble')
             self.ui.log('google登录完成，即将打开rumble')
